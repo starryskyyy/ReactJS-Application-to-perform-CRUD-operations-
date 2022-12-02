@@ -9,7 +9,7 @@
     font-family: 'Work Sans', sans-serif;
   }
   body{
-    background: rgb(231,194,251);
-    background: linear-gradient(90deg, rgba(231,194,251,1) 32%, rgba(128,139,255,1) 80%);
+    background-color: #f9fafc !important;
+    
   }
 }
