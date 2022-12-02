@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     let navigate = useNavigate();
@@ -38,7 +39,9 @@ export default function Login() {
                         <p className="text-red-400">{login}</p>
                         <div class="flex justify-between items-baseline">
                             <button onClick={postData} type="submit" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Login</button>
-                            <a href="/register" class="text-sm hover:underline">Register!</a>
+                            <Link to='/view'>
+                                <button  class="text-sm hover:underline">Register!</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

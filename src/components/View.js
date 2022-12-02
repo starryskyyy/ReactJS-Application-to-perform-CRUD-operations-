@@ -33,8 +33,8 @@ export default function View() {
     }
 
     const setData = (data) => {
-       
-            console.log(data);
+
+        console.log(data);
         let { _id, first_name, last_name, email, gender, salary } = data;
         localStorage.setItem('ID', _id);
         localStorage.setItem('First Name', first_name);
@@ -49,17 +49,18 @@ export default function View() {
             <div className="py-8">
                 <div>
                     <h2 className="text-2xl font-light my-7">Employees</h2>
-                    <a href="/add"
-                        className=" text-sm bg-purple-400 hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded">
-                        Add New Employee
-                    </a>
+                    <Link to='/update'>
+                        <button className=" text-sm bg-purple-400 hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded">
+                    Add new employee</button>
+                    </Link>
+
                     <a href="/"
                         className=" ml-12 text-sm bg-purple-400 hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded">
                         Logout
                     </a>
                 </div>
                 <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                    
+
                     <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
 
                         <table className="min-w-full leading-normal">
