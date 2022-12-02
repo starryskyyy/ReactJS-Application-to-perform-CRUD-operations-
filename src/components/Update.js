@@ -10,6 +10,8 @@ export default function Update() {
     const [salary, setSalary] = useState('');
     const [id, setID] = useState(null);
     const [successMessage, setSuccessMessage] = useState("");
+    
+    const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
         setID(localStorage.getItem('ID'))
@@ -30,9 +32,11 @@ export default function Update() {
             salary
         }).then((response) => {
             console.log(response);
+            setErrorMessage("")
             setSuccessMessage("Employee has been updated successfully!")
         }).catch(error => {
-            console.log(error)
+            setSuccessMessage("")
+            setErrorMessage(error.response.data.message)
             }
         );
     }
@@ -60,6 +64,7 @@ export default function Update() {
                         <label class="block mt-3 font-semibold"> Salary</label>
                         <input value={salary} onChange={(e) => setSalary(e.target.value)} type="text" placeholder="Salary" class="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-indigo-500 focus:ring-1 rounded-md" />
                         <p className="text-green-400">{successMessage}</p>
+                        <p className="text-red-400">{errorMessage}</p>
                         <div class="flex justify-between items-baseline">
                             <button onClick={updateAPIData} type="submit" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Update</button>
                             <a href="/view"  class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</a>

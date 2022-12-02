@@ -53,8 +53,13 @@ export default function View() {
                         className=" text-sm bg-purple-400 hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded">
                         Add New Employee
                     </a>
+                    <a href="/"
+                        className=" ml-12 text-sm bg-purple-400 hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded">
+                        Logout
+                    </a>
                 </div>
                 <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                    
                     <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
 
                         <table className="min-w-full leading-normal">

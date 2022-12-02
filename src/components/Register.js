@@ -19,21 +19,13 @@ export default function Register() {
             setErrorMessage("")
             setSuccessMessage("Account has been registered successfully!")
         }).catch(error => {
-            console.log(error)
-            if (error.response.data.message === "user already exists") {
-                setErrorMessage("User already exists!")
-            }
-            else if (error.response.data.message === "incorrect format. for email use example@example.com pattern") {
-                setErrorMessage("Incorrect email format!")
-            }
-            else if(error.response.data.message === "username field can not be empty" || error.response.data.message === "password field can not be empty"){
-                setErrorMessage("Fields can not be empty")
-            }
+            setErrorMessage(error.response.data.message)
+
         });
     }
 
-  return (
-    <div class="relative flex min-h-screen text-gray-800 antialiased flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+    return (
+        <div class="relative flex min-h-screen text-gray-800 antialiased flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
             <div class="relative py-3 sm:w-96 mx-auto text-center">
                 <span class="text-2xl font-light ">Create new account</span>
                 <div class="mt-4 bg-white shadow-md rounded-lg text-left">
@@ -49,14 +41,13 @@ export default function Register() {
                         <p className="text-red-400">{errorMessage}</p>
                         <div class="flex justify-between items-baseline">
                             <button onClick={postData} type="submit" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Register</button>
-                            <a href="/"  class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</a>
-                           
+                            <a href="/" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</a>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-  )
+    )
 }
 
- 
