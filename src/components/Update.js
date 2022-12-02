@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Update() {
 
@@ -10,7 +11,7 @@ export default function Update() {
     const [salary, setSalary] = useState('');
     const [id, setID] = useState(null);
     const [successMessage, setSuccessMessage] = useState("");
-    
+
     const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
@@ -37,7 +38,7 @@ export default function Update() {
         }).catch(error => {
             setSuccessMessage("")
             setErrorMessage(error.response.data.message)
-            }
+        }
         );
     }
 
@@ -67,7 +68,10 @@ export default function Update() {
                         <p className="text-red-400">{errorMessage}</p>
                         <div class="flex justify-between items-baseline">
                             <button onClick={updateAPIData} type="submit" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Update</button>
-                            <a href="/view"  class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</a>
+                            <Link to='/view'>
+                                <button  class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</button>
+                            </Link>
+
                         </div>
                     </div>
                 </div>

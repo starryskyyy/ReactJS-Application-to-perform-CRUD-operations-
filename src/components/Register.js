@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default function Register() {
     const [username, setUsername] = useState("");
@@ -41,7 +42,10 @@ export default function Register() {
                         <p className="text-red-400">{errorMessage}</p>
                         <div class="flex justify-between items-baseline">
                             <button onClick={postData} type="submit" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Register</button>
-                            <a href="/" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</a>
+                            <Link to='/'>
+                                <button  class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</button>
+                            </Link>
+                            
 
                         </div>
                     </div>

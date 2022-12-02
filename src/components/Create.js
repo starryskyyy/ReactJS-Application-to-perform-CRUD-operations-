@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default function Create() {
 
@@ -57,7 +58,10 @@ export default function Create() {
                         <p className="text-red-400">{errorMessage}</p>
                         <div class="flex justify-between items-baseline">
                             <button onClick={postData} type="submit" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Add</button>
-                            <a href="/view" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</a>
+                            <Link to='/view'>
+                                <button  class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</button>
+                            </Link>
+                            
                         </div>
                     </div>
                 </div>
