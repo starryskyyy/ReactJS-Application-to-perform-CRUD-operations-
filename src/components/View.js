@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 export default function View() {
 
     const [APIData, setAPIData] = useState([]);
+    const [successMessage, setSuccessMessage] = useState("");
 
     useEffect(() => {
         axios.get(`https://backend-assignment2.herokuapp.com/api/emp/employees`)
@@ -25,6 +26,7 @@ export default function View() {
     const onDelete = (id) => {
         axios.delete(`https://backend-assignment2.herokuapp.com/api/emp/employees/${id}`)
             .then(() => {
+                setSuccessMessage("Employee has been deleted successfully")
                 getData();
             })
             .catch(error => {
@@ -142,8 +144,8 @@ export default function View() {
                                 )
                             })}
                         </table>
-
                     </div>
+                    <p className="mt-8 text-green-400">{successMessage}</p>
                 </div>
             </div>
         </div>
