@@ -49,7 +49,7 @@ export default function View() {
             <div className="py-8">
                 <div>
                     <h2 className="text-2xl font-light my-7">Employees</h2>
-                    <Link to='/update'>
+                    <Link to='/add'>
                         <button className=" text-sm bg-purple-400 hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded">
                     Add new employee</button>
                     </Link>

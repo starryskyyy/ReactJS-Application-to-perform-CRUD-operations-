@@ -39,7 +39,7 @@ export default function Login() {
                         <p className="text-red-400">{login}</p>
                         <div class="flex justify-between items-baseline">
                             <button onClick={postData} type="submit" class="mt-4 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Login</button>
-                            <Link to='/view'>
+                            <Link to='/register'>
                                 <button  class="text-sm hover:underline">Register!</button>
                             </Link>
                         </div>
