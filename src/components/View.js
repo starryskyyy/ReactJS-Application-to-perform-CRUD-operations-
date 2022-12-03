@@ -79,14 +79,6 @@ export default function View() {
                                     </th>
                                     <th
                                         className="px-5 py-3 border-b-2 border-gray-200 bg-purple-400 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                                        Gender
-                                    </th>
-                                    <th
-                                        className="px-5 py-3 border-b-2 border-gray-200 bg-purple-400 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                                        Salary
-                                    </th>
-                                    <th
-                                        className="px-5 py-3 border-b-2 border-gray-200 bg-purple-400 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                         Action
                                     </th>
                                 </tr>
@@ -113,18 +105,17 @@ export default function View() {
                                                 <p className="text-gray-900 whitespace-no-wrap">{data.email}</p>
                                             </td>
                                             <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                <p className="text-gray-900 whitespace-no-wrap">
-                                                    {data.gender}
-                                                </p>
-                                            </td>
-                                            <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                <p className="text-gray-900 whitespace-no-wrap">
-                                                    ${data.salary}
-                                                </p>
-                                            </td>
-                                            <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                            <span
+                                                    className="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight mx-3 w-20 text-center">
+                                                    <span aria-hidden
+                                                        className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                                                    <Link to='/viewEmployee'>
+                                                        <button onClick={() => setData(data)} className="relative">View</button>
+                                                    </Link>
+
+                                                </span>
                                                 <span
-                                                    className="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight mx-3">
+                                                    className="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight mx-3 w-20 text-center">
                                                     <span aria-hidden
                                                         className="absolute inset-0 bg-orange-200 opacity-50 rounded-full"></span>
                                                     <Link to='/update'>
@@ -133,7 +124,7 @@ export default function View() {
 
                                                 </span>
                                                 <span
-                                                    className="relative inline px-3 py-1 font-semibold text-red-900 leading-tight">
+                                                    className="relative inline px-3 py-1 font-semibold text-red-900 leading-tight w-20 text-center">
                                                     <span aria-hidden
                                                         className="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
                                                     <button onClick={() => onDelete(data._id)} className="relative">Delete</button>
