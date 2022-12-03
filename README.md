@@ -18,7 +18,11 @@ Demo: https://symphonious-churros-8fb6bb.netlify.app/
 
 Application takes data saved in the database and displays it in the table 
 
-![view](https://snipboard.io/ZOofPs.jpg)
+![view](https://snipboard.io/w7Pbc8.jpg)
+
+## View employee :mag_right:
+
+![view emp](https://snipboard.io/hRxKWu.jpg)
 
 ## Add new employee page :heavy_plus_sign:
 
@@ -28,7 +32,7 @@ This page lets user to add information about new employee and add it to the data
 
 After new employee was added the information will appear in the table
 
-![view after add](https://snipboard.io/NiQxVw.jpg)
+![view after add](https://snipboard.io/GvaxK0.jpg)
 
 ## Update employee :recycle:
 
@@ -37,13 +41,13 @@ This page lets user to update information about selected employee
 ![update](https://snipboard.io/JYdzV2.jpg)
 
 
-![view after update](https://snipboard.io/eFvkVc.jpg)
+![view after update](https://snipboard.io/vV6jgL.jpg)
 
 ## Delete employee :x:
 
 After pressing delete button employee will be removed from the database and table 
 
-![delete](https://snipboard.io/7KmB0N.jpg)
+![delete](https://snipboard.io/tFkY1g.jpg)
 
 ## Authors
 
