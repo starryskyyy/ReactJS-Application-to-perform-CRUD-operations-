@@ -8,13 +8,8 @@ export default function ViewEmployee() {
     const [email, setEmail] = useState('');
     const [gender, setGender] = useState('');
     const [salary, setSalary] = useState('');
-    const [id, setID] = useState(null);
-    const [successMessage, setSuccessMessage] = useState("");
-
-    const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
-        setID(localStorage.getItem('ID'))
         setFirstName(localStorage.getItem('First Name'));
         setLastName(localStorage.getItem('Last Name'));
         setEmail(localStorage.getItem('Email'));
