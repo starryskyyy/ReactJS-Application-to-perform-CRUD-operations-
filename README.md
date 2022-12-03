@@ -5,7 +5,7 @@ ReactJS application that lets user to perform Create, Read, Update and Delete op
 
 Backend was deployed on Heroku and was used in the frontend application via axios http client.
 
-Demo: https://symphonious-churros-8fb6bb.netlify.app/
+Demo: https://admirable-griffin-0757c6.netlify.app/
 
 
 ## Login and signup page :computer:
