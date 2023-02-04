@@ -32,7 +32,7 @@ export default function ViewEmployee() {
                         <span class="block mt-3 font-semibold"> Gender</span>
                         <span class="text-xl font-light "><span></span>{gender}</span>
                         <span class="block mt-3 font-semibold"> Salary</span>
-                        <span class="text-xl font-light "><span></span>{salary}</span>
+                        <span class="text-xl font-light "><span></span>${parseFloat(salary).toFixed(2)}</span>
                         <div class="flex justify-between items-baseline">
                             <Link to='/view'>
                                 <button class="mt-5 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 ">Back</button>
